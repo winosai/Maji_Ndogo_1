@@ -78,3 +78,9 @@ SET
 WHERE
 	biological > 0.01
     AND results = "Clean";
+
+/* updating the blank email column with the email adress for each employee*/
+UPDATE
+	employee
+SET
+	email = CONCAT(LOWER(REPLACE(employee_name, " ", "." )),"@ndogowater.gov");
